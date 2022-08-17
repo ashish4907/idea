@@ -1,32 +1,28 @@
 import java.util.Comparator;
 
-public class Employee implements Comparator<Employee> {
-int id,age;
-String name;
-long number;
+public class Employee implements Comparator<Object> {
 
+	int id;
+	String name;
+	int age;
+	long phoneNumber;
 
-public Employee(int id, int age, String name, long number) {
-	super();
-	this.id = id;
-	this.age = age;
-	this.name = name;
-	this.number = number;
-}
+	public Employee(int id, String name, int age, long phoneNumber) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.phoneNumber = phoneNumber;
+	}
 
-public Employee() {
-	
-}
+	@Override
+	public int compare(Object o1, Object o2) {
 
-@Override
-public int compare(Employee o1, Employee o2) {
+		return 0;
+	}
 
-	
-	return 0;
-}
+	public Employee() {
 
-@Override
-public String toString() {
-	return "id=" + id + ", age=" + age + ", name=" + name + ", number=" + number;
-}
+	}
+
 }
